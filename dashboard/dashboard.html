@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - The Daily Chronicle</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>The Daily Chronicle</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="opinion.html" class="nav-link">Opinion</a>
+                </li>
+                <li class="nav-item">
+                    <a href="lifestyle.html" class="nav-link">Lifestyle</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item user-menu">
+                    <div class="user-dropdown">
+                        <button class="user-btn">
+                            <span class="user-name">User</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="dashboard.html" class="dropdown-link active">Dashboard</a>
+                            <a href="profile.html" class="dropdown-link">Profile</a>
+                            <a href="bookmarks.html" class="dropdown-link">Saved Articles</a>
+                            <a href="preferences.html" class="dropdown-link">Preferences</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-link logout-btn">Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard-main">
+        <div class="dashboard-container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <div class="welcome-section">
+                    <h1 class="welcome-title">Welcome back, <span id="userName">User</span></h1>
+                    <p class="welcome-subtitle">Stay updated with your personalized news feed</p>
+                </div>
+                <div class="stats-section">
+                    <div class="stat-card">
+                        <div class="stat-number" id="articlesRead">0</div>
+                        <div class="stat-label">Articles Read</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="bookmarks">0</div>
+                        <div class="stat-label">Bookmarked</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="comments">0</div>
+                        <div class="stat-label">Comments</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Tabs -->
+            <div class="dashboard-tabs">
+                <button class="tab-btn active" data-tab="feed">My Feed</button>
+                <button class="tab-btn" data-tab="bookmarks">Saved Articles</button>
+                <button class="tab-btn" data-tab="preferences">Preferences</button>
+                <button class="tab-btn" data-tab="activity">Reading History</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- My Feed Tab -->
+                <div class="tab-pane active" id="feed-tab">
+                    <div class="feed-filters">
+                        <h3>Filter by Category</h3>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-category="all">All</button>
+                            <button class="filter-btn" data-category="news">News</button>
+                            <button class="filter-btn" data-category="opinion">Opinion</button>
+                            <button class="filter-btn" data-category="lifestyle">Lifestyle</button>
+                        </div>
+                    </div>
+                    <div class="articles-grid" id="personalizedFeed">
+                        <!-- Personalized articles will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Bookmarks Tab -->
+                <div class="tab-pane" id="bookmarks-tab">
+                    <div class="bookmarks-header">
+                        <h3>Your Saved Articles</h3>
+                        <button class="clear-all-btn" id="clearBookmarks">Clear All</button>
+                    </div>
+                    <div class="articles-grid" id="bookmarkedArticles">
+                        <!-- Bookmarked articles will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Preferences Tab -->
+                <div class="tab-pane" id="preferences-tab">
+                    <div class="preferences-section">
+                        <h3>Reading Preferences</h3>
+                        <form class="preferences-form" id="preferencesForm">
+                            <div class="pref-group">
+                                <h4>Favorite Categories</h4>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="categories" value="world">
+                                        <span class="checkmark"></span>
+                                        World News
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="categories" value="business">
+                                        <span class="checkmark"></span>
+                                        Business
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="categories" value="technology">
+                                        <span class="checkmark"></span>
+                                        Technology
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="categories" value="sports">
+                                        <span class="checkmark"></span>
+                                        Sports
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="categories" value="health">
+                                        <span class="checkmark"></span>
+                                        Health
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="pref-group">
+                                <h4>Email Notifications</h4>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="notifications" value="breaking">
+                                        <span class="checkmark"></span>
+                                        Breaking News Alerts
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="notifications" value="daily">
+                                        <span class="checkmark"></span>
+                                        Daily News Digest
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="notifications" value="weekly">
+                                        <span class="checkmark"></span>
+                                        Weekly Summary
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="save-preferences-btn">Save Preferences</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Activity Tab -->
+                <div class="tab-pane" id="activity-tab">
+                    <div class="activity-header">
+                        <h3>Your Reading Activity</h3>
+                        <select class="time-filter" id="activityFilter">
+                            <option value="today">Today</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                            <option value="all">All Time</option>
+                        </select>
+                    </div>
+                    <div class="activity-list" id="activityList">
+                        <!-- Reading activity will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

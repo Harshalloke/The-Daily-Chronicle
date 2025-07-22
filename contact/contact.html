@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The Daily Chronicle</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Back to Home Link -->
+    <div class="back-link">
+        <a href="index.html" class="back-btn">← Back to Chronicle</a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>The Daily Chronicle</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../news/news.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../opinon/opinon.html" class="nav-link">Opinion</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../lifestyle/lifestyle.html" class="nav-link">Lifestyle</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+                <li class="nav-item auth-item">
+                    <a href="../auth/login.html" class="nav-link signup-btn">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="contact-header">
+        <div class="header-content">
+            <div class="header-date">
+                <span id="current-date"></span>
+            </div>
+            <h1 class="contact-title">
+                <span class="word">Contact</span>
+                <span class="word">The</span>
+                <span class="word">Chronicle</span>
+            </h1>
+            <div class="contact-divider"></div>
+            <p class="contact-subtitle">Get in touch with our newsroom</p>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="contact-main">
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <div class="section-header">
+                    <h2 class="section-title">Send us a Message</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" id="firstName" class="form-input" required>
+                        </div>
+                        <div class="form-group half">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" id="lastName" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <select id="subject" class="form-input form-select" required>
+                            <option value="">Select a topic</option>
+                            <option value="news-tip">News Tip</option>
+                            <option value="story-idea">Story Idea</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="subscription">Subscription</option>
+                            <option value="technical">Technical Issue</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-input form-textarea" rows="6" required placeholder="Tell us your story..."></textarea>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter">
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter
+                        </label>
+                    </div>
+
+                    <button type="submit" class="contact-btn primary">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info-section">
+                <div class="section-header">
+                    <h2 class="section-title">Newsroom Information</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">🖂</div>
+                        <h3 class="info-title">Editorial</h3>
+                        <p class="info-detail">editor@dailychronicle.com</p>
+                        <p class="info-note">For story submissions and news tips</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">☏</div>
+                        <h3 class="info-title">Newsroom</h3>
+                        <p class="info-detail">(555) 123-4567</p>
+                        <p class="info-note">Breaking news hotline available 24/7</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">⟟</div>
+                        <h3 class="info-title">Address</h3>
+                        <p class="info-detail">123 Chronicle Street<br>News District, NY 10001</p>
+                        <p class="info-note">Editorial office hours: 9 AM - 6 PM EST</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">@</div>
+                        <h3 class="info-title">Social Media</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">Facebook</a>
+                            <a href="#" class="social-link">LinkedIn</a>
+                        </div>
+                        <p class="info-note">Follow us for breaking news updates</p>
+                    </div>
+                </div>
+
+                <!-- Department Directory -->
+                <div class="department-section">
+                    <h3 class="department-title">Department Directory</h3>
+                    <div class="department-list">
+                        <div class="department-item">
+                            <span class="dept-name">General Inquiries</span>
+                            <span class="dept-contact">info@dailychronicle.com</span>
+                        </div>
+                        <div class="department-item">
+                            <span class="dept-name">Advertising</span>
+                            <span class="dept-contact">ads@dailychronicle.com</span>
+                        </div>
+                        <div class="department-item">
+                            <span class="dept-name">Subscriptions</span>
+                            <span class="dept-contact">subscribe@dailychronicle.com</span>
+                        </div>
+                        <div class="department-item">
+                            <span class="dept-name">Letters to Editor</span>
+                            <span class="dept-contact">letters@dailychronicle.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <section class="contact-footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <h3>Have a Breaking Story?</h3>
+                <p>Our newsroom is always ready to hear from you. Whether it's a tip, feedback, or story idea, we value every message from our readers.</p>
+            </div>
+            <div class="footer-cta">
+                <a href="mailto:news@dailychronicle.com" class="footer-btn">Email News Desk</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="contact.js"></script>
+</body>
+</html>

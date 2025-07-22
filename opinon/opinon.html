@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opinion & Editorial - The Daily Chronicle</title>
+    <link rel="stylesheet" href="opinon.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>The Daily Chronicle</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../news/news.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../opinon/opinon.html" class="nav-link active">Opinion</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../lifestyle/lifestyle.html" class="nav-link">Lifestyle</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../contact/contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item auth-item">
+                    <a href="../auth/login.html" class="nav-link signup-btn">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Opinion Header -->
+    <section class="opinion-header">
+        <div class="header-content">
+            <div class="header-date">
+                <span id="current-date"></span>
+            </div>
+            <h1 class="opinion-title">
+                <span class="word">Opinion</span>
+                <span class="word">&</span>
+                <span class="word">Editorial</span>
+            </h1>
+            <div class="opinion-divider"></div>
+            <p class="opinion-subtitle">Perspectives that shape the conversation</p>
+        </div>
+    </section>
+
+    <!-- Opinion Categories -->
+    <section class="opinion-categories">
+        <div class="categories-container">
+            <h2 class="categories-title">Editorial Sections</h2>
+            <div class="categories-grid">
+                <button class="category-btn active" data-category="all">All Opinions</button>
+                <button class="category-btn" data-category="editorial">Editorial</button>
+                <button class="category-btn" data-category="columns">Columns</button>
+                <button class="category-btn" data-category="letters">Letters</button>
+                <button class="category-btn" data-category="guest">Guest Writers</button>
+                <button class="category-btn" data-category="debate">Debate</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Editorial -->
+    <section class="featured-opinion">
+        <div class="opinion-container">
+            <div class="featured-editorial" data-category="editorial">
+                <div class="editorial-content">
+                    <div class="editorial-badge">FEATURED EDITORIAL</div>
+                    <div class="editorial-meta">
+                        <span class="editorial-category">Editorial</span>
+                        <span class="editorial-date">Today</span>
+                        <span class="editorial-author">By Editorial Board</span>
+                    </div>
+                    <h2 class="editorial-title">The Future of Democratic Discourse in the Digital Age</h2>
+                    <p class="editorial-excerpt">As social media platforms reshape how we consume and discuss news, we must examine the fundamental changes to democratic participation and public debate. The challenge lies not in the technology itself, but in how we adapt our institutions and practices to preserve meaningful dialogue.</p>
+                    <a href="#" class="read-editorial-btn">Read Full Editorial →</a>
+                </div>
+                <div class="editorial-sidebar">
+                    <div class="editor-note">
+                        <h3>Editor's Note</h3>
+                        <p>This editorial represents the collective view of The Daily Chronicle's editorial board after extensive research and discussion.</p>
+                    </div>
+                    <div class="related-opinions">
+                        <h3>Related Opinions</h3>
+                        <ul>
+                            <li><a href="#">The Digital Divide's Impact on Democracy</a></li>
+                            <li><a href="#">Fact-Checking in the Modern Era</a></li>
+                            <li><a href="#">Social Media Regulation Debate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opinion Grid -->
+    <section class="opinion-grid">
+        <div class="opinion-container">
+            <div class="grid-header">
+                <h2 class="grid-title">All Perspectives</h2>
+                <div class="grid-controls">
+                    <select class="sort-select">
+                        <option value="latest">Latest First</option>
+                        <option value="popular">Most Discussed</option>
+                        <option value="controversial">Most Controversial</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="opinions-grid" id="opinionsGrid">
+                <!-- Opinion 1 -->
+                <article class="opinion-card" data-category="columns">
+                    <div class="card-header">
+                        <div class="author-info">
+                            <div class="author-avatar">JD</div>
+                            <div class="author-details">
+                                <h4 class="author-name">Dr. Jane Doe</h4>
+                                <p class="author-title">Political Analyst</p>
+                            </div>
+                        </div>
+                        <div class="opinion-meta">
+                            <span class="opinion-category">Column</span>
+                            <span class="opinion-time">4 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Why Economic Recovery Requires Bold Policy Changes</h3>
+                        <p class="card-excerpt">The current economic climate demands innovative approaches that go beyond traditional monetary policy. We need comprehensive reforms that address structural inequalities while fostering sustainable growth.</p>
+                        <div class="engagement-stats">
+                            <span class="stat">142 Comments</span>
+                            <span class="stat">89 Shares</span>
+                            <span class="stat">4 min read</span>
+                        </div>
+                        <a href="#" class="card-link">Read Opinion →</a>
+                    </div>
+                </article>
+
+                <!-- Opinion 2 -->
+                <article class="opinion-card" data-category="guest">
+                    <div class="card-header">
+                        <div class="author-info">
+                            <div class="author-avatar">MS</div>
+                            <div class="author-details">
+                                <h4 class="author-name">Prof. Michael Smith</h4>
+                                <p class="author-title">Environmental Scientist</p>
+                            </div>
+                        </div>
+                        <div class="opinion-meta">
+                            <span class="opinion-category">Guest Writer</span>
+                            <span class="opinion-time">6 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Climate Action: Beyond International Agreements</h3>
+                        <p class="card-excerpt">While global climate summits make headlines, the real progress happens at the local level. Cities and communities are leading the charge with practical solutions that demonstrate what's possible.</p>
+                        <div class="engagement-stats">
+                            <span class="stat">87 Comments</span>
+                            <span class="stat">156 Shares</span>
+                            <span class="stat">6 min read</span>
+                        </div>
+                        <a href="#" class="card-link">Read Opinion →</a>
+                    </div>
+                </article>
+
+                <!-- Opinion 3 -->
+                <article class="opinion-card" data-category="debate">
+                    <div class="card-header">
+                        <div class="debate-banner">DEBATE</div>
+                        <div class="opinion-meta">
+                            <span class="opinion-category">Pro/Con Debate</span>
+                            <span class="opinion-time">8 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Should AI Development Be Regulated? Two Experts Weigh In</h3>
+                        <p class="card-excerpt">Technology ethicist Dr. Sarah Chen argues for immediate regulation, while innovation advocate Prof. David Lee makes the case for self-governance. Both perspectives offer compelling insights.</p>
+                        <div class="debate-participants">
+                            <div class="participant">
+                                <strong>Pro:</strong> Dr. Sarah Chen
+                            </div>
+                            <div class="participant">
+                                <strong>Con:</strong> Prof. David Lee
+                            </div>
+                        </div>
+                        <div class="engagement-stats">
+                            <span class="stat">298 Comments</span>
+                            <span class="stat">234 Shares</span>
+                            <span class="stat">8 min read</span>
+                        </div>
+                        <a href="#" class="card-link">Read Debate →</a>
+                    </div>
+                </article>
+
+                <!-- Opinion 4 -->
+                <article class="opinion-card" data-category="letters">
+                    <div class="card-header">
+                        <div class="letter-header">LETTERS TO THE EDITOR</div>
+                        <div class="opinion-meta">
+                            <span class="opinion-category">Reader Letter</span>
+                            <span class="opinion-time">1 day ago</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">"Public Transportation Needs More Investment"</h3>
+                        <p class="card-excerpt">A collection of reader responses to our recent editorial on urban transportation. Citizens share their experiences and propose solutions for improving public transit systems.</p>
+                        <div class="letter-count">
+                            <span>5 Letters Published</span>
+                        </div>
+                        <div class="engagement-stats">
+                            <span class="stat">67 Comments</span>
+                            <span class="stat">43 Shares</span>
+                            <span class="stat">3 min read</span>
+                        </div>
+                        <a href="#" class="card-link">Read Letters →</a>
+                    </div>
+                </article>
+
+                <!-- Opinion 5 -->
+                <article class="opinion-card" data-category="columns">
+                    <div class="card-header">
+                        <div class="author-info">
+                            <div class="author-avatar">RJ</div>
+                            <div class="author-details">
+                                <h4 class="author-name">Robert Johnson</h4>
+                                <p class="author-title">Technology Columnist</p>
+                            </div>
+                        </div>
+                        <div class="opinion-meta">
+                            <span class="opinion-category">Column</span>
+                            <span class="opinion-time">1 day ago</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">The Privacy Paradox: Why We Say We Care But Act Otherwise</h3>
+                        <p class="card-excerpt">Despite widespread concerns about data privacy, consumer behavior suggests a different story. Understanding this paradox is key to creating meaningful privacy protections.</p>
+                        <div class="engagement-stats">
+                            <span class="stat">203 Comments</span>
+                            <span class="stat">178 Shares</span>
+                            <span class="stat">5 min read</span>
+                        </div>
+                        <a href="#" class="card-link">Read Opinion →</a>
+                    </div>
+                </article>
+
+                <!-- Opinion 6 -->
+                <article class="opinion-card" data-category="editorial">
+                    <div class="card-header">
+                        <div class="editorial-stamp">EDITORIAL</div>
+                        <div class="opinion-meta">
+                            <span class="opinion-category">Editorial Board</span>
+                            <span class="opinion-time">2 days ago</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Education Reform: A Call for Evidence-Based Solutions</h3>
+                        <p class="card-excerpt">Our education system requires thoughtful reform based on research and best practices, not political rhetoric. Here's what the evidence tells us about improving student outcomes.</p>
+                        <div class="engagement-stats">
+                            <span class="stat">156 Comments</span>
+                            <span class="stat">289 Shares</span>
+                            <span class="stat">7 min read</span>
+                        </div>
+                        <a href="#" class="card-link">Read Editorial →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="load-more-btn" id="loadMoreBtn">Load More Opinions</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Opinion Section -->
+    <section class="submit-opinion">
+        <div class="submit-container">
+            <div class="submit-content">
+                <h2 class="submit-title">Share Your Perspective</h2>
+                <p class="submit-text">We welcome thoughtful commentary and diverse viewpoints from our readers</p>
+                <div class="submit-options">
+                    <a href="#" class="submit-btn primary">Submit Op-Ed</a>
+                    <a href="#" class="submit-btn secondary">Write Letter to Editor</a>
+                </div>
+                <div class="guidelines-link">
+                    <a href="#" class="guidelines">View submission guidelines →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opinion Modal (for reading full articles) -->
+    <div class="opinion-modal" id="opinionModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">×</button>
+            
+            <div class="modal-header">
+                <div class="modal-meta">
+                    <span class="modal-category" id="modalCategory">Editorial</span>
+                    <span class="modal-time" id="modalTime">Today</span>
+                    <span class="modal-author" id="modalAuthor">By Editorial Board</span>
+                </div>
+                <h1 class="modal-title" id="modalTitle">Opinion Title</h1>
+                <div class="modal-divider"></div>
+            </div>
+
+            <div class="modal-body">
+                <div class="author-bio" id="authorBio">
+                    <div class="bio-avatar" id="bioAvatar">ED</div>
+                    <div class="bio-info">
+                        <h3 class="bio-name" id="bioName">Editorial Board</h3>
+                        <p class="bio-description" id="bioDescription">The Editorial Board represents the collective voice of The Daily Chronicle's editorial team.</p>
+                    </div>
+                </div>
+
+                <div class="modal-article">
+                    <div class="article-lead" id="modalLead">
+                        This is the lead paragraph that provides a compelling introduction to the opinion piece.
+                    </div>
+
+                    <div class="article-content" id="modalContent">
+                        <p>Opinion article content goes here...</p>
+                    </div>
+
+                    <div class="article-footer">
+                        <div class="article-engagement">
+                            <div class="engagement-actions">
+                                <button class="action-btn" data-action="like">👍 Agree (45)</button>
+                                <button class="action-btn" data-action="disagree">👎 Disagree (12)</button>
+                                <button class="action-btn" data-action="share">📤 Share</button>
+                            </div>
+                        </div>
+                        
+                        <div class="article-share">
+                            <span class="share-label">Share this opinion:</span>
+                            <button class="share-btn" data-platform="twitter">Twitter</button>
+                            <button class="share-btn" data-platform="facebook">Facebook</button>
+                            <button class="share-btn" data-platform="linkedin">LinkedIn</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="opinion.js"></script>
+</body>
+</html>

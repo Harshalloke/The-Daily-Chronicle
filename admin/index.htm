@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - The Daily Chronicle</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-nav">
+            <div class="admin-logo">
+                <h1>Chronicle CMS</h1>
+            </div>
+            <div class="admin-user">
+                <span class="user-name" id="adminUserName">Admin</span>
+                <button class="logout-btn" id="adminLogout">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Layout -->
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#dashboard" class="nav-link active" data-section="dashboard">
+                            <span class="nav-icon">📊</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#articles" class="nav-link" data-section="articles">
+                            <span class="nav-icon">📰</span>
+                            Articles
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#create" class="nav-link" data-section="create">
+                            <span class="nav-icon">✏️</span>
+                            Create New
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#media" class="nav-link" data-section="media">
+                            <span class="nav-icon">🖼️</span>
+                            Media Library
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#comments" class="nav-link" data-section="comments">
+                            <span class="nav-icon">💬</span>
+                            Comments
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#users" class="nav-link" data-section="users">
+                            <span class="nav-icon">👥</span>
+                            Users
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#analytics" class="nav-link" data-section="analytics">
+                            <span class="nav-icon">📈</span>
+                            Analytics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#settings" class="nav-link" data-section="settings">
+                            <span class="nav-icon">⚙️</span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Dashboard Section -->
+            <section class="admin-section active" id="dashboard-section">
+                <div class="section-header">
+                    <h2>Dashboard Overview</h2>
+                    <div class="header-actions">
+                        <button class="refresh-btn" id="refreshDashboard">Refresh</button>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📰</div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="totalArticles">0</div>
+                            <div class="stat-label">Total Articles</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="totalUsers">0</div>
+                            <div class="stat-label">Registered Users</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💬</div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="totalComments">0</div>
+                            <div class="stat-label">Comments</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="totalViews">0</div>
+                            <div class="stat-label">Page Views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-charts">
+                    <div class="chart-card">
+                        <h3>Article Performance</h3>
+                        <div class="chart-container">
+                            <canvas id="articleChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>User Growth</h3>
+                        <div class="chart-container">
+                            <canvas id="userChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list" id="recentActivity">
+                        <!-- Recent activities will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Articles Management Section -->
+            <section class="admin-section" id="articles-section">
+                <div class="section-header">
+                    <h2>Manage Articles</h2>
+                    <div class="header-actions">
+                        <button class="primary-btn" id="createArticleBtn">Create New Article</button>
+                    </div>
+                </div>
+
+                <div class="articles-filters">
+                    <div class="filter-group">
+                        <label>Status:</label>
+                        <select id="statusFilter">
+                            <option value="all">All</option>
+                            <option value="published">Published</option>
+                            <option value="draft">Draft</option>
+                            <option value="pending">Pending Review</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Category:</label>
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="news">News</option>
+                            <option value="opinion">Opinion</option>
+                            <option value="lifestyle">Lifestyle</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Search:</label>
+                        <input type="text" id="articleSearch" placeholder="Search articles...">
+                    </div>
+                </div>
+
+                <div class="articles-table">
+                    <table id="articlesTable">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Created</th>
+                                <th>Views</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="articlesTableBody">
+                            <!-- Articles will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination" id="articlesPagination">
+                    <!-- Pagination will be generated here -->
+                </div>
+            </section>
+
+            <!-- Article Editor Section -->
+            <section class="admin-section" id="create-section">
+                <div class="section-header">
+                    <h2 id="editorTitle">Create New Article</h2>
+                    <div class="header-actions">
+                        <button class="secondary-btn" id="saveDraftBtn">Save Draft</button>
+                        <button class="primary-btn" id="publishBtn">Publish</button>
+                    </div>
+                </div>
+
+                <form class="article-form" id="articleForm">
+                    <input type="hidden" id="articleId" name="id">
+                    
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="articleTitle">Article Title</label>
+                            <input type="text" id="articleTitle" name="title" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="articleCategory">Category</label>
+                            <select id="articleCategory" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="news">News</option>
+                                <option value="opinion">Opinion</option>
+                                <option value="lifestyle">Lifestyle</option>
+                                <option value="business">Business</option>
+                                <option value="technology">Technology</option>
+                                <option value="sports">Sports</option>
+                            </select>
+                        </div>
+                        <div class="form-group half">
+                            <label for="articleAuthor">Author</label>
+                            <input type="text" id="articleAuthor" name="author" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="articleExcerpt">Excerpt</label>
+                            <textarea id="articleExcerpt" name="excerpt" rows="3" placeholder="Brief summary of the article..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="articleTags">Tags</label>
+                            <input type="text" id="articleTags" name="tags" placeholder="Enter tags separated by commas">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="featuredImage">Featured Image</label>
+                            <div class="image-upload">
+                                <input type="file" id="featuredImage" name="featuredImage" accept="image/*">
+                                <div class="image-preview" id="imagePreview">
+                                    <span>Click to upload image or drag and drop</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label for="articleContent">Article Content</label>
+                            <div class="editor-toolbar">
+                                <button type="button" class="editor-btn" data-command="bold">B</button>
+                                <button type="button" class="editor-btn" data-command="italic">I</button>
+                                <button type="button" class="editor-btn" data-command="underline">U</button>
+                                <button type="button" class="editor-btn" data-command="insertOrderedList">OL</button>
+                                <button type="button" class="editor-btn" data-command="insertUnorderedList">UL</button>
+                                <button type="button" class="editor-btn" data-command="createLink">Link</button>
+                                <button type="button" class="editor-btn" id="insertQuote">Quote</button>
+                            </div>
+                            <div class="content-editor" id="contentEditor" contenteditable="true">
+                                <p>Start writing your article here...</p>
+                            </div>
+                            <textarea id="articleContent" name="content" style="display: none;"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <div class="form-actions">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="featuredArticle" name="featured">
+                                    <span class="checkmark"></span>
+                                    Feature this article
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="allowComments" name="allowComments" checked>
+                                    <span class="checkmark"></span>
+                                    Allow comments
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="../auth.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latest News - The Daily Chronicle</title>
+    <link rel="stylesheet" href="news.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>The Daily Chronicle</h2>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="news.html" class="nav-link active">News</a>
+          </li>
+          <li class="nav-item">
+            <a href="../opinon/opinon.html" class="nav-link">Opinion</a>
+          </li>
+          <li class="nav-item">
+            <a href="../lifestyle/lifestyle.html" class="nav-link">Lifestyle</a>
+          </li>
+          <li class="nav-item">
+            <a href="../contact/contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item auth-item">
+            <a href="../auth/login.html" class="nav-link signup-btn">Login</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- News Header -->
+    <section class="news-header">
+      <div class="header-content">
+        <div class="header-date">
+          <span id="current-date"></span>
+        </div>
+        <h1 class="news-title">
+          <span class="word">Latest</span>
+          <span class="word">News</span>
+          <span class="word">Today</span>
+        </h1>
+        <div class="news-divider"></div>
+        <p class="news-subtitle">
+          Stay informed with breaking news and updates
+        </p>
+      </div>
+    </section>
+
+    <!-- Breaking News Ticker -->
+    <div class="breaking-ticker">
+      <div class="ticker-label">BREAKING</div>
+      <div class="ticker-scroll">
+        <span class="ticker-item"
+          >Global markets reach record highs amid economic recovery</span
+        >
+        <span class="ticker-item"
+          >• New climate summit scheduled for next month</span
+        >
+        <span class="ticker-item"
+          >• Technology sector shows unprecedented growth</span
+        >
+        <span class="ticker-item"
+          >• Local elections see highest turnout in decades</span
+        >
+      </div>
+    </div>
+
+    <!-- News Categories -->
+    <section class="news-categories">
+      <div class="categories-container">
+        <h2 class="categories-title">News Categories</h2>
+        <div class="categories-grid">
+          <button class="category-btn active" data-category="all">
+            All News
+          </button>
+          <button class="category-btn" data-category="world">World</button>
+          <button class="category-btn" data-category="business">
+            Business
+          </button>
+          <button class="category-btn" data-category="technology">
+            Technology
+          </button>
+          <button class="category-btn" data-category="sports">Sports</button>
+          <button class="category-btn" data-category="health">Health</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured News -->
+    <section class="featured-news">
+      <div class="news-container">
+        <div class="featured-article" data-category="world">
+          <div class="article-image">
+            <div class="image-placeholder">Featured Image</div>
+            <div class="article-badge">FEATURED</div>
+          </div>
+          <div class="article-content">
+            <div class="article-meta">
+              <span class="article-category">World</span>
+              <span class="article-time">2 hours ago</span>
+            </div>
+            <h2 class="article-title">
+              Global Summit Addresses Climate Change with New Initiatives
+            </h2>
+            <p class="article-excerpt">
+              World leaders convene to discuss innovative solutions for
+              environmental challenges, setting ambitious targets for the next
+              decade with unprecedented cooperation between nations.
+            </p>
+            <a href="#" class="read-more-btn">Read Full Story →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="news-grid">
+      <div class="news-container">
+        <div class="grid-header">
+          <h2 class="grid-title">All Stories</h2>
+          <div class="grid-controls">
+            <div class="custom-dropdown">
+              <div class="dropdown-selected">Latest</div>
+              <div class="dropdown-options">
+                <div class="dropdown-option">Latest</div>
+                <div class="dropdown-option">Oldest</div>
+                <div class="dropdown-option">Popular</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="articles-grid" id="articlesGrid">
+          <!-- Article 1 -->
+          <article class="news-card" data-category="business">
+            <div class="card-image">
+              <div class="image-placeholder">Business Image</div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-category">Business</span>
+                <span class="card-time">3 hours ago</span>
+              </div>
+              <h3 class="card-title">
+                Tech Stocks Rally Following Quarterly Earnings
+              </h3>
+              <p class="card-excerpt">
+                Major technology companies report stronger-than-expected
+                earnings, driving market optimism and investor confidence.
+              </p>
+              <a href="#" class="card-link">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="news-card" data-category="technology">
+            <div class="card-image">
+              <div class="image-placeholder">Tech Image</div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-category">Technology</span>
+                <span class="card-time">4 hours ago</span>
+              </div>
+              <h3 class="card-title">
+                Revolutionary AI System Transforms Healthcare
+              </h3>
+              <p class="card-excerpt">
+                New artificial intelligence breakthrough promises to
+                revolutionize medical diagnosis and treatment planning
+                worldwide.
+              </p>
+              <a href="#" class="card-link">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="news-card" data-category="sports">
+            <div class="card-image">
+              <div class="image-placeholder">Sports Image</div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-category">Sports</span>
+                <span class="card-time">5 hours ago</span>
+              </div>
+              <h3 class="card-title">
+                Championship Finals Set Record Attendance
+              </h3>
+              <p class="card-excerpt">
+                Historic sporting event draws largest crowd in stadium history,
+                showcasing incredible athletic performances.
+              </p>
+              <a href="#" class="card-link">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="news-card" data-category="health">
+            <div class="card-image">
+              <div class="image-placeholder">Health Image</div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-category">Health</span>
+                <span class="card-time">6 hours ago</span>
+              </div>
+              <h3 class="card-title">
+                New Treatment Shows Promise for Rare Diseases
+              </h3>
+              <p class="card-excerpt">
+                Medical researchers announce breakthrough treatment that offers
+                hope for patients with previously untreatable conditions.
+              </p>
+              <a href="#" class="card-link">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="news-card" data-category="world">
+            <div class="card-image">
+              <div class="image-placeholder">World Image</div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-category">World</span>
+                <span class="card-time">7 hours ago</span>
+              </div>
+              <h3 class="card-title">
+                International Trade Agreement Reaches Milestone
+              </h3>
+              <p class="card-excerpt">
+                Historic trade deal between major economies promises to reshape
+                global commerce and economic cooperation.
+              </p>
+              <a href="#" class="card-link">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="news-card" data-category="technology">
+            <div class="card-image">
+              <div class="image-placeholder">Tech Image</div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-category">Technology</span>
+                <span class="card-time">8 hours ago</span>
+              </div>
+              <h3 class="card-title">
+                Space Mission Discovers New Planetary System
+              </h3>
+              <p class="card-excerpt">
+                Advanced telescopes reveal fascinating new solar system with
+                potentially habitable planets in distant galaxy.
+              </p>
+              <a href="#" class="card-link">Read More →</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-section">
+          <button class="load-more-btn" id="loadMoreBtn">
+            Load More Stories
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section">
+      <div class="newsletter-container">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">Stay Updated</h2>
+          <p class="newsletter-text">
+            Get the latest news delivered directly to your inbox
+          </p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Modal -->
+    <div class="article-modal" id="articleModal">
+      <div class="modal-overlay" id="modalOverlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">×</button>
+
+        <div class="modal-header">
+          <div class="modal-meta">
+            <span class="modal-category" id="modalCategory">World</span>
+            <span class="modal-time" id="modalTime">2 hours ago</span>
+            <span class="modal-author">By Chronicle Staff</span>
+          </div>
+          <h1 class="modal-title" id="modalTitle">Article Title</h1>
+          <div class="modal-divider"></div>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-image">
+            <div class="image-placeholder" id="modalImage">Article Image</div>
+            <div class="image-caption" id="modalCaption">
+              Image caption goes here
+            </div>
+          </div>
+
+          <div class="modal-article">
+            <div class="article-lead" id="modalLead">
+              This is the lead paragraph that provides a compelling introduction
+              to the story.
+            </div>
+
+            <div class="article-content" id="modalContent">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+
+            <div class="article-footer">
+              <div class="article-tags" id="modalTags">
+                <span class="tag">Breaking News</span>
+                <span class="tag">Global Affairs</span>
+                <span class="tag">Politics</span>
+              </div>
+
+              <div class="article-share">
+                <span class="share-label">Share:</span>
+                <button class="share-btn" data-platform="twitter">
+                  Twitter
+                </button>
+                <button class="share-btn" data-platform="facebook">
+                  Facebook
+                </button>
+                <button class="share-btn" data-platform="linkedin">
+                  LinkedIn
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="news.js"></script>
+    <script>
+  const dropdown = document.querySelector('.custom-dropdown');
+  const selected = dropdown.querySelector('.dropdown-selected');
+  const options = dropdown.querySelector('.dropdown-options');
+  const optionItems = dropdown.querySelectorAll('.dropdown-option');
+
+  selected.addEventListener('click', () => {
+    options.style.display = options.style.display === 'block' ? 'none' : 'block';
+  });
+
+  optionItems.forEach(option => {
+    option.addEventListener('click', () => {
+      selected.textContent = option.textContent;
+      options.style.display = 'none';
+    });
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener('click', function (e) {
+    if (!dropdown.contains(e.target)) {
+      options.style.display = 'none';
+    }
+  });
+</script>
+
+  </body>
+</html>

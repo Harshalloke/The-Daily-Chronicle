@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - The Daily Chronicle</title>
+    <link rel="stylesheet" href="auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="preloader" id="preloader">
+    <div class="preloader-content">
+        <div class="preloader-header">
+            <h1 class="preloader-logo">The Daily Chronicle</h1>
+            <div class="preloader-date" id="preloader-date"></div>
+        </div>
+        
+        <div class="loading-section">
+            <div class="typewriter-container">
+                <p class="typewriter-text" id="typewriter">Loading today's news...</p>
+                <span class="typewriter-cursor">|</span>
+            </div>
+            
+            <div class="loading-bar">
+                <div class="loading-progress" id="loading-progress"></div>
+            </div>
+            
+            <div class="loading-percentage" id="loading-percentage">0%</div>
+        </div>
+        
+        <div class="news-ticker">
+            <div class="ticker-content">
+                <span>BREAKING: Fresh stories loading...</span>
+                <span>• World news updating...</span>
+                <span>• Local reports refreshing...</span>
+                <span>• Opinion pieces ready...</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Back to Home Link -->
+    <div class="back-link">
+        <a href="../index.html" class="back-btn">↩ Back to Chronicle</a>
+    </div>
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <!-- Header -->
+            <div class="auth-header">
+                <h1 class="auth-logo">The Daily Chronicle</h1>
+                <div class="auth-divider"></div>
+                <h2 class="auth-title">Join Our Community</h2>
+                <p class="auth-subtitle">Create your account to get started</p>
+            </div>
+
+            <!-- Signup Form -->
+            <form class="auth-form" id="signupForm">
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" id="firstName" class="form-input" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" id="lastName" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="signupEmail" class="form-label">Email Address</label>
+                    <input type="email" id="signupEmail" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="signupPassword" class="form-label">Password</label>
+                    <input type="password" id="signupPassword" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="form-input" required>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newsletter">
+                        <span class="checkmark"></span>
+                        Subscribe to our newsletter
+                    </label>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the <a href="#" class="terms-link">Terms of Service</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="auth-btn primary">Create Account</button>
+            </form>
+
+            <!-- Switch to Login -->
+            <div class="auth-switch">
+                <p>Already have an account? <a href="login.html" class="switch-link">Sign in here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

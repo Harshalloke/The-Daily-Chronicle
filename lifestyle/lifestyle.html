@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle - The Daily Chronicle</title>
+    <link rel="stylesheet" href="lifestyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>The Daily Chronicle</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../news/news.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../opinon/opinon.html" class="nav-link">Opinion</a>
+                </li>
+                <li class="nav-item">
+                    <a href="lifestyle.html" class="nav-link active">Lifestyle</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../contact/contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item auth-item">
+                    <a href="../auth/login.html" class="nav-link signup-btn">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lifestyle Header -->
+    <section class="lifestyle-header">
+        <div class="header-content">
+            <div class="header-date">
+                <span id="current-date"></span>
+            </div>
+            <h1 class="lifestyle-title">
+                <span class="word">Lifestyle</span>
+                <span class="word">&</span>
+                <span class="word">Culture</span>
+            </h1>
+            <div class="lifestyle-divider"></div>
+            <p class="lifestyle-subtitle">Enriching life through art, culture, and meaningful experiences</p>
+        </div>
+    </section>
+
+    <!-- Lifestyle Categories -->
+    <section class="lifestyle-categories">
+        <div class="categories-container">
+            <h2 class="categories-title">Explore Categories</h2>
+            <div class="categories-grid">
+                <button class="category-btn active" data-category="all">All Stories</button>
+                <button class="category-btn" data-category="culture">Culture</button>
+                <button class="category-btn" data-category="travel">Travel</button>
+                <button class="category-btn" data-category="food">Food & Dining</button>
+                <button class="category-btn" data-category="wellness">Wellness</button>
+                <button class="category-btn" data-category="fashion">Fashion</button>
+                <button class="category-btn" data-category="home">Home & Living</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Lifestyle -->
+    <section class="featured-lifestyle">
+        <div class="lifestyle-container">
+            <div class="featured-article" data-category="culture">
+                <div class="feature-image">
+                    <div class="image-placeholder">Featured Culture Image</div>
+                    <div class="feature-badge">FEATURED</div>
+                </div>
+                <div class="feature-content">
+                    <div class="feature-meta">
+                        <span class="feature-category">Culture</span>
+                        <span class="feature-time">3 hours ago</span>
+                        <span class="feature-author">By Sarah Mitchell</span>
+                    </div>
+                    <h2 class="feature-title">The Renaissance of Local Art Galleries in Digital Age</h2>
+                    <p class="feature-excerpt">As virtual exhibitions dominated during the pandemic, local art galleries are now experiencing a remarkable renaissance. Visitors are returning with renewed appreciation for the tactile experience of viewing art in person, creating vibrant community spaces that blend traditional curation with modern innovation.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Art</span>
+                        <span class="tag">Community</span>
+                        <span class="tag">Culture</span>
+                    </div>
+                    <a href="#" class="read-feature-btn">Read Full Story →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle Grid -->
+    <section class="lifestyle-grid">
+        <div class="lifestyle-container">
+            <div class="grid-header">
+                <h2 class="grid-title">Latest in Lifestyle</h2>
+                <div class="grid-controls">
+                    <select class="sort-select">
+                        <option value="latest">Latest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="trending">Trending</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="articles-grid" id="lifestyleGrid">
+                <!-- Article 1 -->
+                <article class="lifestyle-card" data-category="travel">
+                    <div class="card-image">
+                        <div class="image-placeholder">Travel Destination</div>
+                        <div class="card-category-badge">Travel</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-author">Emma Rodriguez</span>
+                            <span class="card-time">5 hours ago</span>
+                        </div>
+                        <h3 class="card-title">Hidden Gems: Undiscovered European Villages Perfect for Digital Nomads</h3>
+                        <p class="card-excerpt">Discover charming European villages that offer high-speed internet, affordable living costs, and breathtaking scenery—perfect for remote workers seeking inspiration.</p>
+                        <div class="card-stats">
+                            <span class="stat">🕓 6 min read</span>
+                            <span class="stat">❤️ 247 likes</span>
+                            <span class="stat">💬 42 comments</span>
+                        </div>
+                        <a href="#" class="card-link">Explore Destinations →</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="lifestyle-card" data-category="food">
+                    <div class="card-image">
+                        <div class="image-placeholder">Culinary Art</div>
+                        <div class="card-category-badge">Food</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-author">Chef Marcus Thompson</span>
+                            <span class="card-time">8 hours ago</span>
+                        </div>
+                        <h3 class="card-title">Farm-to-Table Revolution: How Sustainable Dining is Reshaping Cities</h3>
+                        <p class="card-excerpt">Urban restaurants are partnering directly with local farms, creating shorter supply chains and fresher flavors while supporting sustainable agriculture practices.</p>
+                        <div class="card-stats">
+                            <span class="stat">🕓 4 min read</span>
+                            <span class="stat">❤️ 189 likes</span>
+                            <span class="stat">💬 67 comments</span>
+                        </div>
+                        <a href="#" class="card-link">Read Recipe Stories →</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="lifestyle-card" data-category="wellness">
+                    <div class="card-image">
+                        <div class="image-placeholder">Wellness Practice</div>
+                        <div class="card-category-badge">Wellness</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-author">Dr. Jennifer Park</span>
+                            <span class="card-time">10 hours ago</span>
+                        </div>
+                        <h3 class="card-title">Mindful Morning Routines That Actually Work for Busy Professionals</h3>
+                        <p class="card-excerpt">Evidence-based morning practices that can be completed in 15 minutes or less, designed specifically for professionals juggling demanding schedules.</p>
+                        <div class="card-stats">
+                            <span class="stat">🕓 7 min read</span>
+                            <span class="stat">❤️ 412 likes</span>
+                            <span class="stat">💬 89 comments</span>
+                        </div>
+                        <a href="#" class="card-link">Start Your Journey →</a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="lifestyle-card" data-category="fashion">
+                    <div class="card-image">
+                        <div class="image-placeholder">Fashion Trends</div>
+                        <div class="card-category-badge">Fashion</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-author">Isabella Chen</span>
+                            <span class="card-time">12 hours ago</span>
+                        </div>
+                        <h3 class="card-title">Sustainable Fashion: Building a Timeless Wardrobe on Any Budget</h3>
+                        <p class="card-excerpt">Learn how to create a versatile, eco-friendly wardrobe with quality pieces that last decades, including tips for thrift shopping and ethical brands.</p>
+                        <div class="card-stats">
+                            <span class="stat">🕓 5 min read</span>
+                            <span class="stat">❤️ 324 likes</span>
+                            <span class="stat">💬 156 comments</span>
+                        </div>
+                        <a href="#" class="card-link">Shop Consciously →</a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="lifestyle-card" data-category="home">
+                    <div class="card-image">
+                        <div class="image-placeholder">Interior Design</div>
+                        <div class="card-category-badge">Home</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-author">David Kim</span>
+                            <span class="card-time">1 day ago</span>
+                        </div>
+                        <h3 class="card-title">Small Space, Big Style: Maximizing Apartment Living in Urban Areas</h3>
+                        <p class="card-excerpt">Creative solutions for making tiny apartments feel spacious and stylish, featuring multi-functional furniture and clever storage innovations.</p>
+                        <div class="card-stats">
+                            <span class="stat">🕓 8 min read</span>
+                            <span class="stat">❤️ 298 likes</span>
+                            <span class="stat">💬 73 comments</span>
+                        </div>
+                        <a href="#" class="card-link">Transform Your Space →</a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="lifestyle-card" data-category="culture">
+                    <div class="card-image">
+                        <div class="image-placeholder">Cultural Event</div>
+                        <div class="card-category-badge">Culture</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-author">Maria Santos</span>
+                            <span class="card-time">1 day ago</span>
+                        </div>
+                        <h3 class="card-title">Street Art as Social Commentary: Murals That Changed Communities</h3>
+                        <p class="card-excerpt">Exploring how street artists around the world are using public spaces to spark conversations about social justice, identity, and community transformation.</p>
+                        <div class="card-stats">
+                            <span class="stat">🕓 9 min read</span>
+                            <span class="stat">❤️ 445 likes</span>
+                            <span class="stat">💬 128 comments</span>
+                        </div>
+                        <a href="#" class="card-link">View Gallery →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="load-more-btn" id="loadMoreBtn">Discover More Stories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending-section">
+        <div class="lifestyle-container">
+            <h2 class="section-title">What's Trending</h2>
+            <div class="trending-grid">
+                <div class="trending-item" data-category="wellness">
+                    <div class="trending-number">01</div>
+                    <div class="trending-content">
+                        <h4 class="trending-title">The 5-Minute Meditation That Changed My Life</h4>
+                        <p class="trending-meta">Wellness • 15,420 views</p>
+                    </div>
+                </div>
+                <div class="trending-item" data-category="food">
+                    <div class="trending-number">02</div>
+                    <div class="trending-content">
+                        <h4 class="trending-title">Sourdough Comeback: Why Everyone's Baking Again</h4>
+                        <p class="trending-meta">Food • 12,890 views</p>
+                    </div>
+                </div>
+                <div class="trending-item" data-category="travel">
+                    <div class="trending-number">03</div>
+                    <div class="trending-content">
+                        <h4 class="trending-title">Solo Travel Safety: Essential Tips for 2024</h4>
+                        <p class="trending-meta">Travel • 11,235 views</p>
+                    </div>
+                </div>
+                <div class="trending-item" data-category="fashion">
+                    <div class="trending-number">04</div>
+                    <div class="trending-content">
+                        <h4 class="trending-title">Vintage Finds: Thrift Shopping Like a Pro</h4>
+                        <p class="trending-meta">Fashion • 9,876 views</p>
+                    </div>
+                </div>
+                <div class="trending-item" data-category="home">
+                    <div class="trending-number">05</div>
+                    <div class="trending-content">
+                        <h4 class="trending-title">Indoor Plants That Actually Purify Air</h4>
+                        <p class="trending-meta">Home • 8,654 views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Stay Inspired</h2>
+                <p class="newsletter-text">Get weekly lifestyle insights, cultural discoveries, and wellness tips delivered to your inbox</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+                <p class="newsletter-note">Join 25,000+ readers who trust us for lifestyle inspiration</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle Modal -->
+    <div class="lifestyle-modal" id="lifestyleModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">×</button>
+            
+            <div class="modal-header">
+                <div class="modal-meta">
+                    <span class="modal-category" id="modalCategory">Culture</span>
+                    <span class="modal-time" id="modalTime">3 hours ago</span>
+                    <span class="modal-author" id="modalAuthor">By Sarah Mitchell</span>
+                </div>
+                <h1 class="modal-title" id="modalTitle">Article Title</h1>
+                <div class="modal-divider"></div>
+                <div class="modal-tags" id="modalTags">
+                    <span class="tag">Art</span>
+                    <span class="tag">Culture</span>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-image">
+                    <div class="image-placeholder" id="modalImage">Article Image</div>
+                    <div class="image-caption" id="modalCaption">Image caption goes here</div>
+                </div>
+
+                <div class="modal-article">
+                    <div class="article-lead" id="modalLead">
+                        This is the lead paragraph that provides an engaging introduction to the lifestyle story.
+                    </div>
+
+                    <div class="article-content" id="modalContent">
+                        <p>Article content goes here...</p>
+                    </div>
+
+                    <div class="article-footer">
+                        <div class="article-engagement">
+                            <div class="engagement-actions">
+                                <button class="action-btn" data-action="like">❤️ Like (247)</button>
+                                <button class="action-btn" data-action="bookmark">🔖 Save</button>
+                                <button class="action-btn" data-action="share">📤 Share</button>
+                            </div>
+                        </div>
+                        
+                        <div class="related-articles">
+                            <h3>You Might Also Like</h3>
+                            <div class="related-list">
+                                <a href="#" class="related-link">The Art of Slow Living in Fast Cities</a>
+                                <a href="#" class="related-link">Sustainable Fashion Brands to Watch</a>
+                                <a href="#" class="related-link">Weekend Wellness Rituals for Busy Lives</a>
+                            </div>
+                        </div>
+
+                        <div class="article-share">
+                            <span class="share-label">Share this story:</span>
+                            <button class="share-btn" data-platform="twitter">Twitter</button>
+                            <button class="share-btn" data-platform="facebook">Facebook</button>
+                            <button class="share-btn" data-platform="pinterest">Pinterest</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lifestyle.js"></script>
+</body>
+</html>
