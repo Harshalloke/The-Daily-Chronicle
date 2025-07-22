@@ -21,6 +21,9 @@ The overall project aims to create a minimalist, user-friendly blog platform wit
 - CSS3, including Flexbox and Grid, to create responsive layouts
 - JavaScript for interactivity and dynamic UI behaviors
 
+## Video Demo
+
+https://github.com/user-attachments/assets/7fc61f7a-a07c-44aa-9f8c-b70e93f11c0d
 ## Getting Started
 
 To view and run the project locally, follow these steps:
